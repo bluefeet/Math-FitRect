@@ -18,6 +18,12 @@ Math::FitRect - Resize one rect in to another while preserving aspect ratio.
 
 =head1 DESCRIPTION
 
+This module is very simple in its content but can save much time, much like 
+other simplistic modules like L<Data::Pager>.  This module is useful for 
+calculating what size you should resize images as for such things as 
+thumbnails.  If you find any other uses for "fitting rectangles in to each 
+other" let the author know.
+
 =cut
 
 #-------------------------------------------------------------------------------
@@ -39,11 +45,11 @@ our @EXPORT_OK = qw(
 
 When a method needs a rectangle type it can be in one of the following forms:
 
-	1) $size
-	This is a single scalar holding an unsigned integer that specifys a square.
+  1) $size
+  This is a single scalar holding an unsigned integer that specifys a square.
   
-	2) [ $w, $h ]
-	An array ref with the first entry being the width and the second the height.
+  2) [ $w, $h ]
+  An array ref with the first entry being the width and the second the height.
   
   3) { w=>$w, h=>$h }
   Hash ref.
@@ -68,6 +74,8 @@ following:
 =head2 fit_rect
 
   my $new_rect1 = fit_rect( $rect1 => $rect2 );
+
+Returns the following hash ref:
 
   { w=>16, h=>8, x=>12, y=>0 } = $new_rect1;
   ............----------------............
@@ -94,6 +102,8 @@ sub fit_rect {
 =head2 crop_rect
 
   my $new_rect1 = crop_rect( $rect1 => $rect2 );
+
+Returns the following hash ref:
 
   { w=>40, h=>20, x=>0, y=>-6 } = $new_rect1;
   ----------------------------------------
