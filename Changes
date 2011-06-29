@@ -1,6 +1,8 @@
 Revision history for Perl extension Math::FitRect.
 
 {{$NEXT}}
+
+0.04      2011-06-28
  - Fix some typos.
 
 0.03      2010-06-23
