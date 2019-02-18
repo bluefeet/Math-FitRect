@@ -2,6 +2,8 @@ Revision history for Perl extension Math-FitRect.
 
 {{$NEXT}}
 
+0.05 2019-02-18T06:15:58Z
+
  - Migrate all the tests from Test::More to Test2::V0.
  - Migrate build tooling from Dist::Zilla to Minilla.
 
