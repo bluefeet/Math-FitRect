@@ -1,8 +1,8 @@
-=head1 NAME
+# NAME
 
 Math::FitRect - Resize one rect in to another while preserving aspect ratio.
 
-=head1 SYNOPSIS
+# SYNOPSIS
 
     use Math::FitRect;
     
@@ -12,30 +12,24 @@ Math::FitRect - Resize one rect in to another while preserving aspect ratio.
     # This will return: {w=>80, h=>40, x=>-19, y=>0}
     my $rect = crop_rect( [80,40] => 40 );
 
-=head1 DESCRIPTION
+# DESCRIPTION
 
 This module is very simple in its content but can save much time, much like
-other simplistic modules like L<Data::Pager>.  This module is useful for
+other simplistic modules like [Data::Pager](https://metacpan.org/pod/Data::Pager).  This module is useful for
 calculating what size you should resize images as for such things as
 thumbnails.
 
-=head1 RECTANGLES
+# RECTANGLES
 
 Rectangles may be specified in several different forms to fit your needs.
 
-=over
+- A simple scalar integer containg the pixel width/height of a square.
+- An array ref containing the width and height of a rectangle: \[$width,$height\]
+- A hash ref containg a w (width) and h (height) key: {w=>$width,h=>$height}
 
-=item A simple scalar integer containg the pixel width/height of a square.
+# FUNCTIONS
 
-=item An array ref containing the width and height of a rectangle: [$width,$height]
-
-=item A hash ref containg a w (width) and h (height) key: {w=>$width,h=>$height}
-
-=back
-
-=head1 FUNCTIONS
-
-=head2 fit_rect
+## fit\_rect
 
     # This will return: {w=>40, h=>20, x=>0, y=>10}
     my $rect = fit_rect( [80,40] => 40 );
@@ -44,22 +38,21 @@ Takes two rectangles and fits the first one inside the second one.  The rectangl
 that will be returned will be a hash ref with a 'w' and 'h' parameter as well
 as 'x' and 'y' parameters which will specify any offset.
 
-=head2 crop_rect
+## crop\_rect
 
     # This will return: {w=>80, h=>40, x=>-19, y=>0}
     my $rect = crop_rect( [80,40] => 40 );
 
-Like the fit_rect function, crop_rect takes two rectangles as a parameter and it
+Like the fit\_rect function, crop\_rect takes two rectangles as a parameter and it
 makes $rect1 completely fill $rect2.  This can mean that the top and bottom or
 the left and right get chopped off (cropped).  This method returns a hash ref just
-like fit_rect.
+like fit\_rect.
 
-=head1 AUTHOR
+# AUTHOR
 
 Aran Clary Deltac <bluefeet@gmail.com>
 
-=head1 LICENSE
+# LICENSE
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
-
