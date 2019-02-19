@@ -1,6 +1,6 @@
 package Math::FitRect;
 
-$Math::FitRect::VERSION = '0.05';
+our $VERSION = '0.05';
 
 =head1 NAME
 
