@@ -1,5 +1,7 @@
 package Math::FitRect;
-
+use 5.008001;
+use strict;
+use warnings;
 our $VERSION = '0.05';
 
 =head1 NAME
@@ -24,9 +26,6 @@ calculating what size you should resize images as for such things as
 thumbnails.
 
 =cut
-
-use strict;
-use warnings;
 
 use Carp qw( croak );
 
